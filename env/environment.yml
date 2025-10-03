@@ -1,0 +1,20 @@
+name: levee-ds
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - lmoments3
+  - rasterio
+  - matplotlib
+  - pyyaml
+  - geopandas
+  - shapely
+  - pyproj
+  - fiona
+  - cartopy
+  - contextily
+  - xyzservices
+  - cmcrameri

@@ -1,0 +1,36 @@
+# --- Common CaMa-Flood map directory (has params.txt, *.bin, and 1sec/ tiles) ---
+base_dir: /data7/hasnain/cmf_v420_pkg/map/tej_01min_0
+
+# --- Storage input folders (yearly rivsto/fldsto[/levsto]) ---
+sto_path_nat: /data7/hasnain/cmf_v420_pkg/out/tej_vic_nolev/
+sto_path_lev: /data7/hasnain/cmf_v420_pkg/out/tej_vic_lev2/
+
+# --- Directory to save frequency-based return period flood storage volume
+output_dir: n-year-storage
+
+# --- Precomputed RP storage folder (nat_storage_RP*.bin, lev_storage_RP*.bin) ---
+#rp_storage_path: /data7/hasnain/analysis/frequency/n-year-storage/
+rp_storage_path: n-year-storage/
+
+# --- Analysis years ---
+analysis_years:
+  start: 1979
+  end: 2019
+
+# --- Return periods for frequency curves/output ---
+return_periods:
+  RPs: [5, 10, 30, 50, 80, 100, 120, 150, 200, 500, 1000]
+  #RPs: [10, 100, 1000]
+
+# --- Which distributions to enable (leave as-is if happy) ---
+#enabled_distributions: ["GEV", "GAM", "PE3", "GUM", "WEI", "WAK"]
+enabled_distributions: ["GEV"]
+
+# --- Downscaling controls (what you currently have in the script) ---
+downscale:
+  rp: 1000
+  west: 138.0
+  east: 139.0
+  south: 36.0
+  north: 37.0
+  catmzz_name: catmz100.bin   # change to 'catmzz.bin' if 10 layers are to use
